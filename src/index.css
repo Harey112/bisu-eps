@@ -1,0 +1,15 @@
+:root{
+  --global-primary-color: #082786;
+  --global-secondary-color: #ffffff/*#D9D9D9*/;
+  --global-primary-bg-img: url("./images/BISU-Clarin.jpg");
+  --global-secondary-bg-img: url("./images/BISU - Clarin Library.jpg");
+  --campus-logo: url("./images/BISU LOGO.png")
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  transition: .05s ease;
+  font-family: Quicksand;
+}

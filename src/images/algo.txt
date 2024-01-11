@@ -1,0 +1,50 @@
+//For searching
+async function search(arr, target){
+    let localArr = arr.slice();
+    let left = 0;
+    let right = localArr.length - 1;
+    let mid = Math.floor((left + right) / 2);
+
+
+
+    while (left <= right) {
+      mid = Math.floor((left + right) / 2);
+
+      if (mid === target) {
+        return mid;
+
+      } else if (arr[mid].value < target) {
+        left = mid + 1; 
+
+      } else {
+        right = mid - 1; 
+      }
+      
+    }
+ 
+    return -1;
+  }
+
+
+
+//For sorting
+  async function sortArr(arr) {
+
+    setOperationMessage('Sorting Array...');
+      let temp1, temp2;
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = i+1; j < arr.length; j++) {
+          if (arr[i] > arr[j]) {
+            temp1 = arr[i];
+            temp2 = arr[j];
+            arr[i] = temp2;
+            arr[j] = temp1;
+    
+          }
+  
+        }
+        }
+
+      }
+      return arr
+  

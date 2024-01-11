@@ -1,0 +1,106 @@
+.department_container{
+    width: 100%;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+#top{
+    width: -webkit-fill-available;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#directory{
+    display: flex;
+
+}
+
+
+#add_department_button{
+    min-width: 213px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 15px;
+    width: max-content;
+}
+
+
+#add_icon{
+    margin: 0 0 0 10px;
+}
+
+#separator{
+    margin: 0 10px 0 10px;
+}
+
+
+#directory{
+    font-family: Poppins;
+    font-weight: 400;
+}
+
+#to_home{
+    text-decoration: none;
+    color: #1e4fde;
+}
+
+
+
+.department_content_div{
+    margin: 20px 0 0 0;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.department_cardview{
+    position: relative;
+    height: 140px;
+    width: 310px;
+    margin: 15px 5px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 0px 16px #cacaca;
+}
+
+.department_cardview::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 100%; 
+    background-color: var(--global-primary-color); 
+    border-radius: 20px 0 0 20px;
+}
+
+.department_cardview:hover{
+    box-shadow: 0px 0cap 20px #8a8a8a;
+}
+
+.department_logo{
+    height: 60px;
+    width: 60px;
+    border: 1px solid var(--global-primary-color);
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}

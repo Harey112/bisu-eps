@@ -1,0 +1,23 @@
+.profile_container{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--global-secondary-color);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.side_bar{
+    height: 100%;
+    width: 22%;
+    background-color: var(--global-primary-color);
+
+}
+
+
+
+
+

@@ -1,0 +1,215 @@
+.login_container{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    background-image: var(--global-primary-color);
+    background-size:cover;
+}
+
+
+.login_div{
+    position: relative;
+    height: 100vh;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--global-secondary-color);
+}
+
+
+.login_form{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+#login_title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-family: Poppins;
+    font-size: xx-large;
+    font-weight: 600;
+    margin: 0 0 50px 0;
+}
+
+
+
+.btn_div{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 55px 0 0 0;
+    align-items: center;
+
+}
+
+
+.banner_div{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: var(--global-primary-bg-img);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: center;  
+}
+
+.bg_div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(8 39 134 / 50%);
+    animation: bg_fade_effect 3s infinite alternate;
+}
+
+
+@keyframes bg_fade_effect {
+    from{
+        background-color: rgb(8 39 134 / 30%);
+    }
+
+    to{
+        background-color: rgb(8 39 134 / 85%);
+    }
+    
+}
+
+
+.banner{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 150px 0;
+    
+}
+
+.title_div{
+    width: auto;
+    margin: 0 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#bisu_logo{
+    height: 150px;
+    width: 150px;
+}
+
+#campus_name{
+    font-family: Poppins;
+    color: #fff;
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+
+
+
+
+#system_name{
+    font-family: Poppins;
+    color: #fff;
+    font-weight: 500;
+    font-size: larger;
+    margin: 10px 0 0 0 ;
+}
+
+
+
+@media screen and (max-width: 1050px) {
+
+    .banner{
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .title_div{
+        margin: 0 0 0 0;
+    }
+
+    #bisu_logo{
+        margin: 0 0 30px 0;
+    }
+    
+}
+
+@media screen and (max-width: 930px) {
+
+    #bisu_logo{
+    height: 130px;
+    width: 130px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .login_div{
+        width: 350px;
+    }
+
+    #campus_name {
+        font-size: x-large;
+    }
+
+    #system_name {
+        font-size: large;
+        margin: 7px 0 0 0;
+    }
+    
+    
+.break_line{
+    height: 2px;
+    }
+}
+
+
+.checkbox{
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+  }
+
+
+
+.input_style1{
+    margin: 0 10%;
+    height: 30px;
+    width: 80%;
+    border-style: none none solid none;
+    border-color: var(--global-primary-color);
+    background-color: transparent;
+    outline: transparent;
+    padding: 0 0 0 5px;
+    font-family: Poppins;
+}

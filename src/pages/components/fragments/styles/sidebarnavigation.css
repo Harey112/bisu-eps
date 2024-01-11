@@ -1,0 +1,115 @@
+.sidebar_navigation{
+    height: 100vh;
+    width: 350px;
+    background-color: var(--global-primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    z-index: 1;
+}
+
+.profile_div{
+    width: 95%;
+    height: 120px;
+    font-family: Poppins;
+    background-color: var(--global-secondary-color);
+    margin: 2.5% 0 0 0;
+    border-style: var(--global-secondary-color) solid;
+    border-radius: 10px 10px 3px 3px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile{
+    margin: 10px 0 0 0;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.image{
+    height: 60px;
+    width: 60px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #333333;
+    border-radius: 100px;
+    background-color: #ffffff;
+    overflow: hidden;
+    display: contents;
+}
+.fullname{
+    margin: 0 0 10px 0;
+    text-decoration: none;
+    font-weight: 600;
+    color: #0c1a43;
+}
+
+
+
+.tab_list{
+    width: 100%;
+    height: -webkit-fill-available;
+    margin: 60px 0 0 0;
+}
+
+
+.tab_link{
+    text-decoration: none;
+}
+
+
+.tab{
+    font-family: Nunito;
+    font-size: large;
+    font-weight: 800;
+    width: 90%;
+    list-style: none;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0 0 0 5%;
+    padding: 0 0 0 5%;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.tab:hover{
+    margin: 0 0 0 0;
+    width: -webkit-fill-available;
+    padding: 0 0 0 10%;
+    background-color:rgb(174, 183, 188);
+    color: black;
+
+}
+
+.tab.selected{
+    background-color: var(--global-secondary-color);
+    color: black;
+    border-style: var(--global-secondary-color) solid;
+    border-radius: 25px 0 0 25px;
+}
+
+
+.tab.selected:hover{
+    width: 90%;
+    margin: 0 0 0 5%;
+    padding: 0 0 0 5%;
+    background-color: var(--global-secondary-color);
+
+}
+
+
+

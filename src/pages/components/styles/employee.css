@@ -1,0 +1,237 @@
+.employee_container{
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+
+}
+
+
+#top{
+    width: -webkit-fill-available;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 0 0;
+}
+
+
+#directory{
+    display: flex;
+
+}
+
+
+#add_button{
+    min-width: 196px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 15px;
+    width: max-content;
+}
+
+
+#add_icon{
+    margin: 0 0 0 10px;
+}
+
+#separator{
+    margin: 0 10px 0 10px;
+}
+
+
+#directory{
+    font-family: Poppins;
+    font-weight: 400;
+}
+
+.prev_tab{
+    text-decoration: none;
+    color: #1e4fde;
+}
+
+
+.new_employee_box{
+    margin: 20px 0 10px 0;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    border: var(--global-primary-color) 2px solid;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+.personal_data-input-div{
+    margin: 0 0 0 0;
+    height: 60px;
+    width: 100%;
+    border-style: solid;
+    border-color: var(--global-primary-color);
+    border-width: 0 0 1px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .radio_selection{
+    display: flex;
+    width: max-content;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+
+  .personal_data-input{
+    height: 50px;
+    width: 98%;
+    margin: 0 5px 0 5px;
+    border-style: none;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: #d9d9d9;
+    outline: transparent;
+    font-family: Poppins;
+    font-size: 15px;
+  }
+
+
+  .personal_data-input-radio{
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    border-style: none;
+    border-color: var(--global-primary-color);
+    background-color: transparent;
+    outline: transparent;
+    padding: 0;
+    font-family: Poppins;
+    cursor: pointer;
+  }
+
+
+  .personal_data-label{
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0 0 0 10px;
+    min-width: max-content;
+    width: auto;
+    cursor:default;
+  }
+
+
+  .personal_data-checkbox_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+  .checkbox{
+    height: 20px;
+    width: 20px;
+  }
+ 
+
+  .info_title{
+    width: 85%;
+    height: 30px;
+    border: 3px solid var(--global-primary-color);
+    margin: 15px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .employee_content_div{
+    margin: 20px 0 0 0;
+    height: 85%;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+
+  }
+
+
+.employee_content{
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+.employee_filter{
+    width: -webkit-fill-available;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.search_div{
+  width: 320px;
+  height: -webkit-fill-available;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#search_box{
+  margin: 0;
+  height: 40px;
+  width: 200px;
+  border-style:solid;
+}
+
+.employee_list{
+  margin: 20px 0 0 0;
+  width: 100%;
+  height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.employee{
+  width: -webkit-fill-available;
+  height: auto;
+  border: 2px solid var(--global-primary-color);
+  padding: 10px 0;
+  margin: 2px 0;
+}
+
+
+#name{
+  font-family: Poppins;
+  margin: 0 0 0 10px;
+  font-size: large;
+  font-weight: 600;
+}
+
+#details{
+  font-family: Quicksand;
+  margin: 5px 0 0 15px;
+  font-size: medium;
+  font-weight: 400;
+}
+
+.employee:hover{
+  background-color: #80aeff;
+}

@@ -1,0 +1,46 @@
+.dashboard_content{
+    margin: 20px 0 0 0;
+    width: -webkit-fill-available;
+    max-height: -webkit-fill-available;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.tabs{
+    margin: 20px 5px;
+    width: 330px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 15px;
+    box-shadow: 2px 2px 12px #8080808a;
+}
+
+
+.tabs:hover{
+    box-shadow: 2px 2px 20px #8080808a;
+}
+
+
+.card_name{
+    font-family: Quicksand;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.card_message{
+    font-family: Quicksand;
+    font-size: medium;
+    font-weight: 300;
+    margin: 5px 0 0 20px;
+}
+
