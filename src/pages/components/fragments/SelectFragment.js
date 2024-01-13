@@ -11,21 +11,24 @@ const SelectFragment = (props) => {
             setRootDimention(rootDivRef.current.getBoundingClientRect());
         }
     }, []);
-    
+
 
     //Style
     const rootStyle = {height: '40px',width: '100%', display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', alignItems: 'center', justifyContent: 'center'};
-    const selectStye = { width: 'auto', height: rootDimension.height*.98+'px', fontFamily: 'Poppins', fontSize: '15px', fontWeight: 400, outline: 'none', padding: '0 0 0 5px' };
+    const selectStye = { width: 'auto', maxWidth: '150px', height: rootDimension.height*.98+'px', fontFamily: 'Poppins', fontSize: '15px', fontWeight: 400, outline: 'none', padding: '0 0 0 1px' };
     const labelStyle = { fontFamily: 'Barlow', fontSize: 'large', fontWeight: 500, margin: '0 10px 0 0' };
     return ( 
         <Fragment>
             <div style={rootStyle}>
-            <label htmlFor={props.name.toLowerCase()} style={labelStyle}>{props.name}:</label>
+            <label htmlFor={props.name.toLowerCase()} style={labelStyle}>{props.name}{props.required && <span style={{color: 'red'}}>*</span>}:</label>
             <select id={props.name.toLowerCase()} name={props.name.toLowerCase()} value={props.value} onChange={props.onChange} style={selectStye}>
-                { props.options &&
+                { (props.options.length > 0) ? (
                     props.options.map((option) => (
                         <option key={option.value} value={option.value}>{option.name}</option>
                     ))
+                ) : (
+                    <option value=''>Nothing</option>
+                )
                 }
             </select>
             </div>

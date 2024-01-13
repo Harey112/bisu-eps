@@ -29,10 +29,10 @@ async function getUserByID(id) {
 
         }
       }
-      return {isSuccess: true, data: userDataClone};
-  } catch (error) {
-    console.error( error);
-    return {isSuccess: false, data: error.message};
+      return { isSuccess: true, data: userDataClone, message: 'Successfully Retrived.' };
+    } catch (error) {
+        console.error(error);
+        return { isSuccess: false, data: null, message: error.message };
   }
 }
 

@@ -52,7 +52,7 @@ const loginAccount = async (email, password) => {
     const token = await user.getIdToken();
     const data = await getUserByID(uid);
 
-    return { isLoggedIn: true, user: { uid: uid, token: token, userType: data.data.employmentInformation.role }, message: "Login Successful" };
+    return { isLoggedIn: true, user: {token: token, user: data.data.employmentInformation.role}, message: "Login Successful" };
   } catch (error) {
     return { isLoggedIn: false, user: null, message: errorMessage(error) };
   }
