@@ -346,7 +346,7 @@ const AdminPage = () => {
                                                     <img id='delete_icon' src={deleteIcon} alt="" className="action_icon" onClick={()=>{setPromptUser({
                                                         title: 'Confirm?',
                                                         message: `Do you want to delete ${hr.data.personalInformation.firstname} ${hr.data.personalInformation.middlename} ${hr.data.personalInformation.surname}?`,
-                                                        negativeButton: {label: 'Cancel', action: setPromptUser(null)},
+                                                        negativeButton: {label: 'Cancel', action: ()=> {setPromptUser(null)}},
                                                         positiveButton: {label: 'Yes', action: ()=>{setPromptUser(null); deleteUser(hr.id)}}
                                                     })}}/>
                                                     <p id='delete_label' className='action_label'>Delete User</p>

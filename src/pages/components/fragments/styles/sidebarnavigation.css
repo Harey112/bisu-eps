@@ -1,6 +1,6 @@
 .sidebar_navigation{
     height: 100vh;
-    width: 350px;
+    width: 270px;
     background-color: var(--global-primary-color);
     display: flex;
     flex-direction: column;

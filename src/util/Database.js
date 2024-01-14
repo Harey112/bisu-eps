@@ -44,6 +44,7 @@ async function pushEmployeePersonalInfo(personalData, docID) {
     await setDoc(doc(db, "Employee", docID, "User_Data", "Personal_Information"), personalData);
     return { isSuccess: true, message: "Employee account information updated successfully!" };
   } catch (error) {
+    console.error(error);
     return { isSuccess: false, message: error.message };
   }
   
@@ -57,6 +58,7 @@ async function pushEmployeeInfo(employeeData, docID) {
     await setDoc(doc(db, "Employee", docID, "User_Data", "Current_Employment_Information"), employeeData);
     return { isSuccess: true, message: "Employee information updated successfully!" };
   } catch (error) {
+    console.error(error);
     return { isSuccess: false, message: error.message };
   }
 
@@ -72,7 +74,7 @@ async function addDepartment(name, description) {
 
    return { isSuccess: true, message: name+' is created successfully!' };
  } catch (error) {
-   console.error('Error updating employee account information', error.message);
+  console.error(error);
    return { isSuccess: false, message: error.message };
  }
 }
@@ -83,7 +85,7 @@ async function getAllDepartments() {
     let list = await getDocs(collection(db, 'Department'));
     return { isRetrieved: true, data: list.docs, message: 'Department list successfully retrieved.' };
   } catch (error) {
-    console.error('Error:', error);
+    console.error(error);
     return { isRetrieved: false, data: null, message: error.message || error };
   }
 }
@@ -95,7 +97,7 @@ async function getAllEmployees() {
     const list = await getDocs(collection(db, 'Employee'));
     return { isRetrieved: true, data: list.docs, message: 'Employee list successfully retrieved.' };
   } catch (error) {
-    console.error('Error:', error);
+    console.error(error);
     return { isRetrieved: false, data: null, message: error.message };
   }
 }
@@ -129,7 +131,7 @@ async function searchEmployee(filter) {
       return { isSuccess: false, list: null, message: employees.message };
     }
   } catch (error) {
-    console.error(error.message);
+    console.error(error);
     return { isSuccess: false, list: null, message: error.message };
   }
 }

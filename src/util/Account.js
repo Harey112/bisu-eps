@@ -54,6 +54,7 @@ const loginAccount = async (email, password) => {
 
     return { isLoggedIn: true, user: {token: token, user: data.data.employmentInformation.role}, message: "Login Successful" };
   } catch (error) {
+    console.error(error);
     return { isLoggedIn: false, user: null, message: errorMessage(error) };
   }
 };
@@ -64,6 +65,7 @@ const loginAccount = async (email, password) => {
       let response = await createUserWithEmailAndPassword(auth, email, password);
       return { isCreated: true, uid: response.user.uid, message: "Successfully Created." };
     } catch (error) {
+      console.error(error);
       return { isCreated: false, uid: null, message: errorMessage(error)};
     }
   };
@@ -79,23 +81,19 @@ const loginAccount = async (email, password) => {
   });
   
 
-
-  const getCurrentUser = () => {
-    return new Promise((resolve, reject) => {
-      const unsubscribe = auth.onAuthStateChanged((user) => {
-        if (user) {
-          resolve(user);
-        } else {
-          resolve(null);
-        }
-  
-        unsubscribe();
-      }, (error) => {
-        reject(error);
+ async function getCurrentUser() {
+  return await new Promise(async (resolve, reject) => {
+    try {
+      const unsubscribe = onAuthStateChanged(auth, (user) => {
+        resolve({ isSuccess: true, data: {...user}, message: 'Successfully retrieved.' });
+        unsubscribe(); // Stop listening for changes after retrieving the user
       });
-    });
-  };
-
+    } catch (error) {
+      reject({ isSuccess: false, data: null, message: error.message });
+    }
+  });
+}
+  
 
   const updateUserEmail = (newEmail) => {
     const user = auth.currentUser;
