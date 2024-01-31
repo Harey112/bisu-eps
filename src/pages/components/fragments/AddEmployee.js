@@ -197,7 +197,7 @@ const AddEmployee = () => {
 
                 <p id="category" style={{ width: 'auto', fontFamily: 'Poppins', margin: '-14px 0 0 15px', padding: '0 8px 0 8px', backgroundColor: 'var(--global-secondary-color)' }}>Basic Information</p>
                 <div style={{ height: '-webkit-fill-available', width: '-webkit-fill-available', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-start', justifyContent: 'space-around' }}>
-                <div style={{ margin: '10px 0 10px 0', height: 'auto', width: '98%', display: 'flex', flexFlow: 'row', borderStyle: 'solid', borderWidth: '1px', borderColor: 'var(--global-primary-color)' }}>
+                {/* <div style={{ margin: '10px 0 10px 0', height: 'auto', width: '98%', display: 'flex', flexFlow: 'row', borderStyle: 'solid', borderWidth: '1px', borderColor: 'var(--global-primary-color)' }}>
                             <div style={{ width: '-webkit-fill-available'}}>
                                 <div className="personal_data-input-div ">
                                     <p className="personal_data-label">Surname: </p>
@@ -257,7 +257,7 @@ const AddEmployee = () => {
                                 </div>
 
                             </div>
-                        </div>
+                        </div> */}
                 </div>
                     <div style={{width: '90%', margin: '20px 0', padding: '0 5%', display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
                         <p>*Please double-check the information you entered.</p>

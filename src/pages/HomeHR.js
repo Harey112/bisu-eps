@@ -8,10 +8,10 @@ import Report from "./components/Report";
 const HomeHR = ({selected, view}) => {
 
     const tabs = [
-        { name: "Dashboard", component: Dashboard, id: "dashboard", message: '', data: '', key: 1, priority: 1 },
-        { name: "Department", component: Department, id: "department", message: 'Go To Departments', data: '', key: 2, priority: 0 },
-        { name: "Employee", component: Employee, id: "employee", message: 'Go To Employees', data: '', key: 3, priority: 0 },
-        { name: "Report", component: Report, id: "report", message: 'Go To Reports', data: '', key: 4, priority: 0 },
+        { name: "Dashboard", component: Dashboard, id: "dashboard", message: '', data: '',  priority: 1 },
+        { name: "Department", component: Department, id: "department", message: 'Go To Departments', data: '', priority: 0 },
+        { name: "Employee", component: Employee, id: "employee", message: 'Go To Employees', data: '', priority: 0 },
+        { name: "Report", component: Report, id: "report", message: 'Go To Reports', data: '', priority: 0 },
       ];
 
     let contents = [

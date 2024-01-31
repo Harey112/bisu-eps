@@ -319,14 +319,14 @@ const AdminPage = () => {
                                     <tr>
                                         <td>{`${hr.data.personalInformation.firstname} ${hr.data.personalInformation.middlename} ${hr.data.personalInformation.surname} `}</td>
                                         <td>
-                                            <div className='full_width center_vertical'>
+                                            <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
                                                     
                                                     <p style={{ width: 'fit-content', padding: '3px 8px', backgroundColor: !hr.accountInfo.disabled ? '#2F9B0B' : '#A10808', fontWeight: '700', borderRadius: '5px', color: '#fff'}}>{!hr.accountInfo.disabled ? 'Active' : 'Disabled'}</p>
 
                                                 </div>
                                             </td>
                                         <td>
-                                            <div className='full_width center_vertical'>
+                                            <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
                                                 {!hr.accountInfo.disabled ? (
                                                     <div style={{width: '30%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center'}}>
                                                         <img id='disable_icon' onClick={() => {disableUser(hr.id)}} src={disableUserIcon} alt="" className='action_icon' />

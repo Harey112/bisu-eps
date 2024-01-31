@@ -46,7 +46,7 @@ const Department = () => {
         };
     
         fetchData();
-      }, [addStatus, addError]); 
+      }, [addStatus]); 
 
 
     const addDepartmentDialog = () => {

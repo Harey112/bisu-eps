@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import { Fragment } from "react";
+import { Fragment, useLayoutEffect } from "react";
 import Login from "./pages/Login";
 import HomeHR from "./pages/HomeHR";
 import HomeDeanOrChairperson from "./pages/HomeDeanOrChairperson";
@@ -11,6 +11,19 @@ import Test from './pages/Test';
 function App() {
   const user = JSON.parse(sessionStorage.getItem("epsUser"));
   const isLoggedIn = (user !== null);
+
+
+  useLayoutEffect(()=>{
+    function refreshFragment(){
+        window.location.reload();
+    }
+
+    window.addEventListener('resize', refreshFragment);
+
+    return () => {
+        window.removeEventListener('resize', refreshFragment);
+      };
+  }, [])
 
   return (
     <BrowserRouter>

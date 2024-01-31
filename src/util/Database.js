@@ -25,6 +25,37 @@ async function getUserByID(id) {
             userDataClone.employmentInformation = data.data();
             break;
 
+          case "Family_Background":
+            userDataClone.familyBackground = data.data();
+            break;
+
+          case "Educational_Background":
+            userDataClone.educationalBackground = data.data();
+            break;
+
+          case "Civil_Service_Eligibilty":
+            userDataClone.civilServiceEligibilty = data.data();
+            break;
+
+          case "Work_Experience":
+            userDataClone.workExperience = data.data();
+            break;
+
+          case "Work_Experience":
+            userDataClone.workExperience = data.data();
+            break;
+            
+          case "Voluntary_Work":
+            userDataClone.voluntaryWork = data.data();
+            break;
+
+          case "Learning_Program_Attended":
+            userDataClone.learningProgramAttended = data.data();
+            break;
+          case "Other_Information":
+            userDataClone.otherInformation = data.data();
+            break;
+            
           default:
 
         }
@@ -42,7 +73,7 @@ async function pushEmployeePersonalInfo(personalData, docID) {
     if (!navigator.onLine) throw new Error('No internet connection');
     await setDoc(doc(db, "Employee", docID), {});
     await setDoc(doc(db, "Employee", docID, "User_Data", "Personal_Information"), personalData);
-    return { isSuccess: true, message: "Employee account information updated successfully!" };
+    return { isSuccess: true, message: "Updated successfully!" };
   } catch (error) {
     console.error(error);
     return { isSuccess: false, message: error.message };
@@ -51,16 +82,114 @@ async function pushEmployeePersonalInfo(personalData, docID) {
 }
 
 
-async function pushEmployeeInfo(employeeData, docID) {
+async function pushFamilyBackgroundInfo(employeeData, docID) {
    try {
     if (!navigator.onLine) throw new Error('No internet connection');
     await setDoc(doc(db, "Employee", docID), {});
-    await setDoc(doc(db, "Employee", docID, "User_Data", "Current_Employment_Information"), employeeData);
-    return { isSuccess: true, message: "Employee information updated successfully!" };
+    await setDoc(doc(db, "Employee", docID, "User_Data", "Family_Background"), employeeData);
+    return { isSuccess: true, message: "Updated successfully!" };
   } catch (error) {
     console.error(error);
     return { isSuccess: false, message: error.message };
   }
+
+}
+
+
+async function pushEducationalBackgroundInfo(educationalBackground, docID) {
+  try {
+   if (!navigator.onLine) throw new Error('No internet connection');
+   await setDoc(doc(db, "Employee", docID), {});
+   await setDoc(doc(db, "Employee", docID, "User_Data", "Educational_Background"), educationalBackground);
+   return { isSuccess: true, message: "Updated successfully!" };
+ } catch (error) {
+   console.error(error);
+   return { isSuccess: false, message: error.message };
+ }
+
+}
+
+
+async function pushCivilServiceInfo(civilServiceEligibilty, docID) {
+  try {
+   if (!navigator.onLine) throw new Error('No internet connection');
+   await setDoc(doc(db, "Employee", docID), {});
+   await setDoc(doc(db, "Employee", docID, "User_Data", "Civil_Service_Eligibilty"), civilServiceEligibilty);
+   return { isSuccess: true, message: "Updated successfully!" };
+ } catch (error) {
+   console.error(error);
+   return { isSuccess: false, message: error.message };
+ }
+
+}
+
+
+async function pushWorkExperienceInfo(workExperience, docID) {
+  try {
+   if (!navigator.onLine) throw new Error('No internet connection');
+   await setDoc(doc(db, "Employee", docID), {});
+   await setDoc(doc(db, "Employee", docID, "User_Data", "Work_Experience"), workExperience);
+   return { isSuccess: true, message: "Updated successfully!" };
+ } catch (error) {
+   console.error(error);
+   return { isSuccess: false, message: error.message };
+ }
+
+}
+
+
+async function pushVoluntaryWorkInfo(voluntaryWork, docID) {
+  try {
+   if (!navigator.onLine) throw new Error('No internet connection');
+   await setDoc(doc(db, "Employee", docID), {});
+   await setDoc(doc(db, "Employee", docID, "User_Data", "Voluntary_Work"), voluntaryWork);
+   return { isSuccess: true, message: "Updated successfully!" };
+ } catch (error) {
+   console.error(error);
+   return { isSuccess: false, message: error.message };
+ }
+
+}
+
+
+async function pushLearingProgramAttendedInfo(learningProgramAttended, docID) {
+  try {
+   if (!navigator.onLine) throw new Error('No internet connection');
+   await setDoc(doc(db, "Employee", docID), {});
+   await setDoc(doc(db, "Employee", docID, "User_Data", "Learning_Program_Attended"), learningProgramAttended);
+   return { isSuccess: true, message: "Updated successfully!" };
+ } catch (error) {
+   console.error(error);
+   return { isSuccess: false, message: error.message };
+ }
+
+}
+
+
+async function pushOtherInformationInfo(otherInformation, docID) {
+  try {
+   if (!navigator.onLine) throw new Error('No internet connection');
+   await setDoc(doc(db, "Employee", docID), {});
+   await setDoc(doc(db, "Employee", docID, "User_Data", "Other_Information"), otherInformation);
+   return { isSuccess: true, message: "Updated successfully!" };
+ } catch (error) {
+   console.error(error);
+   return { isSuccess: false, message: error.message };
+ }
+
+}
+
+
+async function pushEmployeeInfo(familyBackground, docID) {
+  try {
+   if (!navigator.onLine) throw new Error('No internet connection');
+   await setDoc(doc(db, "Employee", docID), {});
+   await setDoc(doc(db, "Employee", docID, "User_Data", "Current_Employment_Information"), familyBackground);
+   return { isSuccess: true, message: "Updated successfully!" };
+ } catch (error) {
+   console.error(error);
+   return { isSuccess: false, message: error.message };
+ }
 
 }
 
@@ -102,6 +231,7 @@ async function getAllEmployees() {
   }
 }
 
+
 async function searchEmployee(filter) {
   const keyword = filter.keyword;
   const role = filter.role === 'All' ? '' : filter.role;
@@ -141,6 +271,13 @@ async function searchEmployee(filter) {
 export {
   pushEmployeePersonalInfo,
   pushEmployeeInfo,
+  pushFamilyBackgroundInfo,
+  pushEducationalBackgroundInfo,
+  pushCivilServiceInfo,
+  pushWorkExperienceInfo,
+  pushVoluntaryWorkInfo,
+  pushLearingProgramAttendedInfo,
+  pushOtherInformationInfo,
   addDepartment,
   getAllDepartments,
   getUserByID,

@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, useRef, useState, useLayoutEffect} from "react";
 
 const TextfieldFragment = (props) => {
 
@@ -7,31 +7,71 @@ const TextfieldFragment = (props) => {
     const [rootDimension, setRootDimention] = useState({});
     const [labelDimension, setLabelDimention] = useState({});
 
+    
 
 
-
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (rootDivRef.current && labelRef.current) {
             setRootDimention(rootDivRef.current.getBoundingClientRect());
             setLabelDimention(labelRef.current.getBoundingClientRect());
         }
-    }, []);
+    }, [rootDivRef, labelRef]);
 
-
-
-    //Styles
-    const rootStyle = {height: '40px',width: '100%', display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', alignItems: 'center'};
-    const inputStyle = {width: (rootDimension.width - labelDimension.width) - 20+'px', height:rootDimension.height*.98+'px', borderStyle: 'none', borderRadius: '0px', borderColor: 'transparent', backgroundColor: '#d9d9d9', outline: 'transparent', fontFamily: 'Poppins', fontSize: '15px', padding: '0 0 0 5px' };
-    const labelStyle = { fontFamily: 'Barlow', fontSize: 'large', fontWeight: 500, margin: '0 10px 0 0' };
 
 
     return ( 
         <Fragment>
-            <div style={rootStyle} ref={rootDivRef}>
-                <label htmlFor={props.name.toLowerCase()} ref={labelRef} style={labelStyle}>{props.name}{props.required && <span style={{color: 'red'}}>*</span>}:</label>
-                <input type={props.type} id={props.name.toLowerCase()} name={props.name.toLowerCase()} value={props.value} placeholder={props.name} onChange={props.onChange} style={inputStyle} autoComplete={props.autoComplete !== undefined ? props.autoComplete : 'off'}/>
-            </div>
-        </Fragment>
+        <div ref={rootDivRef} style={{
+          height: '40px',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'nowrap',
+          alignItems: 'center'
+        }}>
+          {props.disable !== undefined && props.disable === true && 
+              <div style={{position: 'absolute', width: rootDimension.width+'px', height: 'inherit', backgroundColor: 'transparent'}}></div>
+          }
+          <p ref={labelRef} style={{
+            fontFamily: 'Poppins',
+            fontSize: '15px',
+            fontWeight: '400',
+            margin: '0 10px 0 0',
+            width: 'auto'
+          }}>
+            { props.name !== undefined && 
+                <>
+                    {props.name}
+                    {props.required && <span style={{ color: 'red' }}>*</span>}:
+                </>
+
+            }
+          </p>
+          <input
+            
+            type={props.type}
+            name={(props.varName) ? props.varName : props.name.toLowerCase().replace(/\s/g, '').replace('-', '')}
+            value={props.value}
+            placeholder={props.placeholder ? props.placeholder : props.name}
+            onChange={(e) => { props.onChange(e) }}
+            style={{
+              width: (Number.parseFloat(rootDimension.width) - Number.parseFloat(labelDimension.width)) - 20 + 'px',
+              height: '90%',
+              borderStyle: 'none',
+              borderRadius: '0px',
+              borderColor: 'transparent',
+              backgroundColor: '#e7e7e7',
+              outline: 'transparent',
+              fontFamily: 'Poppins',
+              fontSize: '15px',
+              padding: '0 0 0 5px',
+              pointerEvents: (props.disable !== undefined && props.disable === true) ? 'none' : 'auto'
+            }}
+            autoComplete={props.autoComplete !== undefined ? props.autoComplete : 'off'}
+          />
+        </div>
+      </Fragment>
+      
      );
 }
 

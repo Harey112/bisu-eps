@@ -76,7 +76,7 @@ const Login = () => {
     <div className="login_container">
 
       <div className="login_div">
-        <form action=""  className="login_form">
+        <form action=""  className="login_form" onSubmit={(e)=> {e.preventDefault(); login();}}>
           <h3 id="login_title">Login</h3>
           <label htmlFor="username_tf" style={{margin: '30px 0 3px 10%'}}>Email</label>
           <input type="text" name="username" id="username_tf" className="input_style1" autoComplete="on" value={email} onChange={handleSetEmail} />
@@ -88,7 +88,7 @@ const Login = () => {
             </div>
           <p style={{margin: '10px 0 0 10%', fontFamily: 'Poppins', fontSize: 'small',color: 'red'}}>{loginMessage}</p>
           <div className="btn_div">
-            <button id="login_btn" type="button" onClick={login}>Login</button>
+            <button id="login_btn" type="submit">Login</button>
 
             <p style={{margin: '10px 0 0 0', fontFamily: 'Poppins', fontSize: 'small'}}>{loginStatus}</p>
            
