@@ -1,5 +1,5 @@
 import { myFirebase } from "../firebase";
-import { collection, doc, getDocs, getFirestore , setDoc} from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, getFirestore , setDoc} from 'firebase/firestore';
 import { userData } from "./DataTemplate";
 
 const db = getFirestore(myFirebase);
@@ -195,7 +195,7 @@ async function pushEmployeeInfo(familyBackground, docID) {
 
 
 async function addDepartment(name, description) {
-  const departmentID = name.toLowerCase().replace(/\s/g, '');
+  const departmentID = Array.from({ length: 15 }, () => Math.floor(Math.random() * 10)).join('');
 
   try {
   if (!navigator.onLine) throw new Error('No internet connection');
@@ -218,6 +218,20 @@ async function getAllDepartments() {
     return { isRetrieved: false, data: null, message: error.message || error };
   }
 }
+
+
+async function getDepartment(id) {
+  try {
+    if (!navigator.onLine) throw new Error('No internet connection');
+    let department = await getDoc(doc(db, 'Department', id));
+    /* console.log(department.data()); */
+    return { isRetrieved: true, data: department.data(), message: 'Department list successfully retrieved.' };
+  } catch (error) {
+    console.error(error);
+    return { isRetrieved: false, data: null, message: error.message || error };
+  }
+}
+
 
 
 async function getAllEmployees() {
@@ -280,6 +294,7 @@ export {
   pushOtherInformationInfo,
   addDepartment,
   getAllDepartments,
+  getDepartment,
   getUserByID,
   getAllEmployees,
   searchEmployee

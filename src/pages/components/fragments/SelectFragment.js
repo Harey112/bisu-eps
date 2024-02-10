@@ -27,6 +27,11 @@ const SelectFragment = (props) => {
             alignItems: 'center',
             justifyContent: 'flex-start'
             }}>
+
+            {props.disable !== undefined && props.disable === true && 
+                <div style={{position: 'absolute', width: rootDimension.width+'px', height: 'inherit', backgroundColor: 'transparent'}}></div>
+            }
+
             <p ref={labelRef} style={{
                 fontFamily: 'Poppins',
                 fontSize: '15px',

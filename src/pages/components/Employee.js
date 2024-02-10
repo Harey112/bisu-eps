@@ -14,7 +14,7 @@ const Employee = () => {
     const [departmentList, setDepartmentList] = useState([]);
     const [fetchDepartmentListStatus, setFetchDepartmentListStatus] = useState(false);
     const [userType, setUserType] = useState();
-    const currentUser = sessionStorage.getItem('epsUser');
+    const currentUser = JSON.parse(sessionStorage.getItem('epsUser'));
     const [searchFilter, setSearchFilter] = useState({
         keyword: '',
         role: 'All',
@@ -29,24 +29,7 @@ const Employee = () => {
           [name]: value
         }));
       };
-
-
-      useEffect(()=>{
-        async function fetchData( ){
-          await getUserByID(currentUser).then((res) => {
-            if(res.isSuccess){
-              setUserType(res.data.employmentInformation.role);
-              
-            }
-          });
-        }
-      
-          fetchData();
-          
-      },[]);
-
     
-
 
     useEffect(() => {
         const fetchData = async () => {
@@ -119,16 +102,12 @@ useEffect(() => {
               </div>
               
               <div className="breakline" style={{width: '-webkit-fill-available', margin: "0 10px 0 10px", height: "2px", backgroundColor: "var(--global-primary-color)"}}></div>
-              {userType &&
+              {currentUser &&
                 <>
-                {userType === 'HR' &&
+                {currentUser.user === 'HR' &&
 
                 <button id="add_button" onClick={addEmployee}>Add Employee <img id="add_icon"  src={addIcon} alt="" /></button>
                 }
-                {userType === 'Admin' &&
-
-                  <button id="add_button" onClick={addEmployee}>Add Employee <img id="add_icon"  src={addIcon} alt="" /></button>
-                  }
                 </>
               }
           </div>
@@ -139,7 +118,7 @@ useEffect(() => {
               </div>
               <div style={{display: 'flex'}}>
               <div style={{ display: 'flex', margin: '10px 0', alignItems: 'center' }}>
-                  <p className="personal_data-label" style={{ margin: '0 10px 0 0 ' }}>Role: </p>
+                  <p className="personal_data-label" style={{ margin: '0 10px 0 0 ' }}>Position: </p>
                   <select  name="role"  className="custom_select"  id="role"  style={{ width: 'auto' }}  value={searchFilter.role}  onChange={handleInputChange}>
                       <option value="All">All</option>
                       <option value="Staff">Staff</option>

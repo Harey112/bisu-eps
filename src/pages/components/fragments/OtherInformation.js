@@ -302,7 +302,7 @@ const OtherInformation = (props) => {
                             <tbody>
                                 <tr>
                                     <td>
-                                        <SelectFragment type='text' name='Category' varName='category' value={newData.category} onChange={(e)=> {handleNewDataChange(e)}} options={[
+                                        <SelectFragment disable={props.viewMode} type='text' name='Category' varName='category' value={newData.category} onChange={(e)=> {handleNewDataChange(e)}} options={[
                                             {name: 'Special Skills and Hobbies', value: 'specialSkills'},
                                             {name: 'Non-Academic Distinctions / Recognition', value: 'recognitions'},
                                             {name: 'Membership in Association / Organization', value: 'associations'},
@@ -396,12 +396,6 @@ const OtherInformation = (props) => {
                         negativeButton={promptUser.negativeButton}
                         positiveButton={promptUser.positiveButton}
                         />
-                </div>
-                )} 
-
-                { props.viewMode && (
-
-                <div style={{position: 'fixed', width: '100%', height: '100%'}}>
                 </div>
                 )} 
 

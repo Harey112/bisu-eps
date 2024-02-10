@@ -196,42 +196,42 @@ const FamilyBackgroundForm = (props) => {
                     <tbody>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Surname' varName='surname' value={formData.spouse.surname} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
+                                <TextfieldFragment  type='text' name='Surname' varName='surname' value={formData.spouse.surname} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Firstname' varName='firstname' value={formData.spouse.firstname} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
+                                <TextfieldFragment  type='text' name='Firstname' varName='firstname' value={formData.spouse.firstname} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Middlename' varName='middlename' value={formData.spouse.middlename} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
+                                <TextfieldFragment  type='text' name='Middlename' varName='middlename' value={formData.spouse.middlename} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Extension' varName='ext' value={formData.spouse.ext} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
+                                <TextfieldFragment  type='text' name='Extension' varName='ext' value={formData.spouse.ext} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Occupation' varName='occupation' value={formData.spouse.occupation} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
+                                <TextfieldFragment  type='text' name='Occupation' varName='occupation' value={formData.spouse.occupation} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Employer/Business Name' varName='businessName' value={formData.spouse.businessName} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
+                                <TextfieldFragment  type='text' name='Employer/Business Name' varName='businessName' value={formData.spouse.businessName} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Business Address' varName='businessAddress' value={formData.spouse.businessAddress} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
+                                <TextfieldFragment  type='text' name='Business Address' varName='businessAddress' value={formData.spouse.businessAddress} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Telephone No' varName='telno' value={formData.spouse.telno} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
+                                <TextfieldFragment  type='text' name='Telephone No' varName='telno' value={formData.spouse.telno} onChange={(e) => {handleFamilyInfoChange(e, 'spouse')}}/>
                             </td>
                         </tr>
                     </tbody>
@@ -245,22 +245,22 @@ const FamilyBackgroundForm = (props) => {
                     <tbody>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Surname' varName='surname' value={formData.father.surname} onChange={(e) => {handleFamilyInfoChange(e, 'father')}}/>
+                                <TextfieldFragment  type='text' name='Surname' varName='surname' value={formData.father.surname} onChange={(e) => {handleFamilyInfoChange(e, 'father')}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Firstname' varName='firstname' value={formData.father.firstname} onChange={(e) => {handleFamilyInfoChange(e, 'father')}}/>
+                                <TextfieldFragment  type='text' name='Firstname' varName='firstname' value={formData.father.firstname} onChange={(e) => {handleFamilyInfoChange(e, 'father')}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Middlename' varName='middlename' value={formData.father.middlename} onChange={(e) => {handleFamilyInfoChange(e, 'father')}}/>
+                                <TextfieldFragment  type='text' name='Middlename' varName='middlename' value={formData.father.middlename} onChange={(e) => {handleFamilyInfoChange(e, 'father')}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Extension' varName='ext' value={formData.father.ext} onChange={(e) => {handleFamilyInfoChange(e, 'father')}}/>
+                                <TextfieldFragment  type='text' name='Extension' varName='ext' value={formData.father.ext} onChange={(e) => {handleFamilyInfoChange(e, 'father')}}/>
                             </td>
                         </tr>
                     </tbody>
@@ -274,22 +274,22 @@ const FamilyBackgroundForm = (props) => {
                     <tbody>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Surname' varName='surname' value={formData.mother.surname} onChange={(e) => {handleFamilyInfoChange(e, 'mother')}}/>
+                                <TextfieldFragment  type='text' name='Surname' varName='surname' value={formData.mother.surname} onChange={(e) => {handleFamilyInfoChange(e, 'mother')}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Firstname' varName='firstname' value={formData.mother.firstname} onChange={(e) => {handleFamilyInfoChange(e, 'mother')}}/>
+                                <TextfieldFragment  type='text' name='Firstname' varName='firstname' value={formData.mother.firstname} onChange={(e) => {handleFamilyInfoChange(e, 'mother')}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Middlename' varName='middlename' value={formData.mother.middlename} onChange={(e) => {handleFamilyInfoChange(e, 'mother')}}/>
+                                <TextfieldFragment  type='text' name='Middlename' varName='middlename' value={formData.mother.middlename} onChange={(e) => {handleFamilyInfoChange(e, 'mother')}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <TextfieldFragment disable={props.viewMode} type='text' name='Extension' varName='ext' value={formData.mother.ext} onChange={(e) => {handleFamilyInfoChange(e, 'mother')}}/>
+                                <TextfieldFragment  type='text' name='Extension' varName='ext' value={formData.mother.ext} onChange={(e) => {handleFamilyInfoChange(e, 'mother')}}/>
                             </td>
                         </tr>
                     </tbody>
@@ -354,12 +354,12 @@ const FamilyBackgroundForm = (props) => {
                             <tbody>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment disable={props.viewMode} type='text' name='Fullname' varName='fullname' value={newChildData.fullname} onChange={(e)=>{handleNewChildDataChange(e)}}/>
+                                        <TextfieldFragment  type='text' name='Fullname' varName='fullname' value={newChildData.fullname} onChange={(e)=>{handleNewChildDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment disable={props.viewMode} type='date' name='Date of Birth' varName='birthdate' value={newChildData.birthdate} onChange={(e)=>{handleNewChildDataChange(e)}}/>
+                                        <TextfieldFragment  type='date' name='Date of Birth' varName='birthdate' value={newChildData.birthdate} onChange={(e)=>{handleNewChildDataChange(e)}}/>
                                     </td>
                                 </tr>
                             </tbody>
@@ -380,12 +380,12 @@ const FamilyBackgroundForm = (props) => {
                             <tbody>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment disable={props.viewMode} type='text' name='Fullname' varName='fullname' value={editChildData.data.fullname} onChange={(e)=>{handleEditChildDataChange(e)}}/>
+                                        <TextfieldFragment  type='text' name='Fullname' varName='fullname' value={editChildData.data.fullname} onChange={(e)=>{handleEditChildDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment disable={props.viewMode} type='date' name='Date of Birth' varName='birthdate' value={editChildData.data.birthdate} onChange={(e)=>{handleEditChildDataChange(e)}}/>
+                                        <TextfieldFragment  type='date' name='Date of Birth' varName='birthdate' value={editChildData.data.birthdate} onChange={(e)=>{handleEditChildDataChange(e)}}/>
                                     </td>
                                 </tr>
                             </tbody>
@@ -448,12 +448,6 @@ const FamilyBackgroundForm = (props) => {
                         />
                 </div>
                 )}         
-
-                 { props.viewMode && (
-
-                <div style={{position: 'fixed', width: '100%', height: '100%'}}>
-                </div>
-                )} 
         </Fragment>
      );
 }

@@ -136,11 +136,13 @@ const AdminPage = () => {
                    
                 }else{
                     appendError(query.data.message);
+                    console.error(query.data.message);
                 }
                 
             } catch (error) {
-                console.error(error)    
+                console.error(error.message)    
                 appendError(error.message);
+                
                 
             }
             setRefreshTrigger(Math.floor(Math.random() * 900) + 100);
@@ -157,6 +159,7 @@ const AdminPage = () => {
             setRefreshTrigger(Math.floor(Math.random() * 900) + 100);
         }else{
             appendError(query.data.message);
+            console.error(query.data.message);
         }
     }
 
@@ -169,6 +172,7 @@ const AdminPage = () => {
             setRefreshTrigger(Math.floor(Math.random() * 900) + 100);
         }else{
             appendError(query.data.message);
+            console.error(query.data.message);
         }
     }
 
@@ -181,6 +185,7 @@ const AdminPage = () => {
             setRefreshTrigger(Math.floor(Math.random() * 900) + 100);
         }else{
             appendError(query.data.message);
+            console.error(query.data.message);
         }
     }
 
@@ -202,6 +207,7 @@ const AdminPage = () => {
                 setRefreshTrigger(Math.floor(Math.random() * 900) + 100);
             }else{
                 appendError(query.data.message);
+                console.error(query.data.message);
             }
         }
 
@@ -222,6 +228,7 @@ const AdminPage = () => {
                 setHRList(query.data.data);
             }else{
                 appendError(query.data.message);
+                console.error(query.data.message);
             }
 
             setFetchListStatus(true);
@@ -261,6 +268,7 @@ const AdminPage = () => {
                 }
             }else{
                 appendError(query.data.message);
+                console.error(query.data.message);
             }
         }
 

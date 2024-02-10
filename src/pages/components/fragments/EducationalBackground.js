@@ -249,39 +249,39 @@ const EducationalBackground = (props) => {
                             <tbody>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment type='text' name='Level' varName='level' value={newData.level} onChange={(e)=> {handleNewDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='text' name='Level' varName='level' value={newData.level} onChange={(e)=> {handleNewDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment type='text' name='Name of School' varName='nameOfSchool' value={newData.nameOfSchool} onChange={(e)=> {handleNewDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='text' name='Name of School' varName='nameOfSchool' value={newData.nameOfSchool} onChange={(e)=> {handleNewDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment type='text' name='Basic Education/Degree/Course' varName='program' value={newData.program} onChange={(e)=> {handleNewDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='text' name='Basic Education/Degree/Course' varName='program' value={newData.program} onChange={(e)=> {handleNewDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <p style={{fontFamily: 'Poppins',fontWeight: '400', width: '100%', display: 'flex', margin: '5px 0'}}>Period of Attendance:</p>
-                                        <TextfieldFragment type='date' name='From' varName='poaFrom' value={newData.poaFrom} onChange={(e)=> {handleNewDataChange(e)}}/>
-                                        <TextfieldFragment type='date' name='To' varName='poaTo' value={newData.poaTo} onChange={(e)=> {handleNewDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='date' name='From' varName='poaFrom' value={newData.poaFrom} onChange={(e)=> {handleNewDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='date' name='To' varName='poaTo' value={newData.poaTo} onChange={(e)=> {handleNewDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment type='text' name='Highest Level' placeholder="Highest Level/Units Earned (if not graduated)" varName='highestLevel' value={newData.highestLevel} onChange={(e)=> {handleNewDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='text' name='Highest Level' placeholder="Highest Level/Units Earned (if not graduated)" varName='highestLevel' value={newData.highestLevel} onChange={(e)=> {handleNewDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment type='text' name='Year Graduated' varName='yearGraduated' value={newData.yearGraduated} onChange={(e)=> {handleNewDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='text' name='Year Graduated' varName='yearGraduated' value={newData.yearGraduated} onChange={(e)=> {handleNewDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment type='text' name='Scholarship/Academic Honor Received' varName='scholarship' value={newData.scholarship} onChange={(e)=> {handleNewDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='text' name='Scholarship/Academic Honor Received' varName='scholarship' value={newData.scholarship} onChange={(e)=> {handleNewDataChange(e)}}/>
                                     </td>
                                 </tr>
                             </tbody>
@@ -304,39 +304,39 @@ const EducationalBackground = (props) => {
                             <tbody>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment type='text' name='Level' varName='level' value={editData.data.level} onChange={(e)=> {handleEditDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='text' name='Level' varName='level' value={editData.data.level} onChange={(e)=> {handleEditDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment type='text' name='Name of School' varName='nameOfSchool' value={editData.data.nameOfSchool} onChange={(e)=> {handleEditDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='text' name='Name of School' varName='nameOfSchool' value={editData.data.nameOfSchool} onChange={(e)=> {handleEditDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment type='text' name='Basic Education/Degree/Course' varName='program' value={editData.data.program} onChange={(e)=> {handleEditDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='text' name='Basic Education/Degree/Course' varName='program' value={editData.data.program} onChange={(e)=> {handleEditDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <p style={{fontFamily: 'Poppins',fontWeight: '400', width: '100%', display: 'flex', margin: '5px 0'}}>Period of Attendance:</p>
-                                        <TextfieldFragment type='date' name='From' varName='poaFrom' value={editData.data.poaFrom} onChange={(e)=> {handleEditDataChange(e)}}/>
-                                        <TextfieldFragment type='date' name='To' varName='poaTo' value={editData.data.poaTo} onChange={(e)=> {handleEditDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='date' name='From' varName='poaFrom' value={editData.data.poaFrom} onChange={(e)=> {handleEditDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='date' name='To' varName='poaTo' value={editData.data.poaTo} onChange={(e)=> {handleEditDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment type='text' name='Highest Level' placeholder="Highest Level/Units Earned (if not graduated)" varName='highestLevel' value={editData.data.highestLevel} onChange={(e)=> {handleEditDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='text' name='Highest Level' placeholder="Highest Level/Units Earned (if not graduated)" varName='highestLevel' value={editData.data.highestLevel} onChange={(e)=> {handleEditDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment type='text' name='Year Graduated' varName='yearGraduated' value={editData.data.yearGraduated} onChange={(e)=> {handleEditDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='text' name='Year Graduated' varName='yearGraduated' value={editData.data.yearGraduated} onChange={(e)=> {handleEditDataChange(e)}}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <TextfieldFragment type='text' name='Scholarship/Academic Honor Received' varName='scholarship' value={editData.data.scholarship} onChange={(e)=> {handleEditDataChange(e)}}/>
+                                        <TextfieldFragment disable={props.viewMode} type='text' name='Scholarship/Academic Honor Received' varName='scholarship' value={editData.data.scholarship} onChange={(e)=> {handleEditDataChange(e)}}/>
                                     </td>
                                 </tr>
                             </tbody>
@@ -401,12 +401,6 @@ const EducationalBackground = (props) => {
                         />
                 </div>
                 )}       
-
-                 { props.viewMode && (
-
-                <div style={{position: 'fixed', width: '100%', height: '100%'}}>
-                </div>
-                )}   
         </Fragment>
      );
 }

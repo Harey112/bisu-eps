@@ -369,13 +369,6 @@ const LearningProgramAttended = (props) => {
                         />
                 </div>
                 )} 
-
-
-                 { props.viewMode && (
-
-                <div style={{position: 'fixed', width: '100%', height: '100%'}}>
-                </div>
-                )} 
         </Fragment>
      );
 }

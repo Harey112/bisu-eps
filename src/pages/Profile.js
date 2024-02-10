@@ -117,7 +117,7 @@ function Profile() {
         selected={selectedTab}
         ref={sideBarRef}
         actionPerTabClick={setSelectedTab}
-        customBottomButton={{ label: 'Back', action: () => { navigate('/') } }}
+        customBottomButton={{ label: 'Back', action: () => { navigate(-1) } }}
       />
     
       <div style={style.contentDisplay}>
@@ -126,7 +126,7 @@ function Profile() {
             <>
               {selectedTab === 'personal_information' && (
                 <>
-                  <PersonalInformationForm userID={userIdToView} viewMode={(currentUser !== userIdToView)} />
+                  <PersonalInformationForm userID={userIdToView} viewMode={(currentUser === userIdToView)} />
                 </>
               )}
     

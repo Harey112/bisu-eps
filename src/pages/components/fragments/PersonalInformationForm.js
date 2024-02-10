@@ -197,12 +197,12 @@ const PersonalInformationForm = (props) => {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <SelectFragment name='Sex' varName='sex' value={formData.sex} onChange={handleInputChange} options={[{name: 'Male', value: 'Male'}, {name: 'Female', value: 'Female'}]}/>
+                                        <SelectFragment disable={props.viewMode} name='Sex' varName='sex' value={formData.sex} onChange={handleInputChange} options={[{name: 'Male', value: 'Male'}, {name: 'Female', value: 'Female'}]}/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <SelectFragment name='Civil Status' value={formData.civilstatus} onChange={handleInputChange} options={
+                                        <SelectFragment disable={props.viewMode} name='Civil Status' value={formData.civilstatus} onChange={handleInputChange} options={
                                             [
                                                 {name: 'Single', value: 'Single'},
                                                 {name: 'Married', value: 'Married'},
@@ -282,7 +282,7 @@ const PersonalInformationForm = (props) => {
                     <tbody>
                         <tr>
                             <td>
-                                <GroupedCheckBoxFragment name='Citizenship' options={
+                                <GroupedCheckBoxFragment disable={props.viewMode} name='Citizenship' options={
                                     [
                                         {name: 'Filipino', value: formData.citizenship.isFilipino, varName: 'isFilipino', onChange: (e)=>{handleCitizenshipChange(e);}},
                                         {name: 'Dual Citizenship', value: formData.citizenship.hasDualCitizenship, varName: 'hasDualCitizenship', onChange: (e)=>{handleCitizenshipChange(e)}}
@@ -293,14 +293,14 @@ const PersonalInformationForm = (props) => {
                         { formData.citizenship.hasDualCitizenship === true && (
                             <tr>
                                 <td>
-                                    <GroupedCheckBoxFragment name='If holder of Dual Citizenship' options={
+                                    <GroupedCheckBoxFragment disable={props.viewMode} name='If holder of Dual Citizenship' options={
                                         [
                                             {name: 'By Birth', value: formData.citizenship.byBirth, varName: 'byBirth', onChange: (e)=>{handleCitizenshipChange(e);}},
                                             {name: 'By Naturalization', value: formData.citizenship.byNaturalization, varName: 'byNaturalization', onChange: (e)=>{handleCitizenshipChange(e)}}
                                         ]
                                     }/>
 
-                                    <SelectFragment name="Select a Country" varName='specifiedCountry' options={countries} onChange={(e)=> {handleCitizenshipChange(e);}}/>
+                                    <SelectFragment disable={props.viewMode} name="Select a Country" varName='specifiedCountry' value={formData.citizenship.specifiedCountry} options={countries} onChange={(e)=> {handleCitizenshipChange(e);}}/>
 
                                 </td>
                             </tr>

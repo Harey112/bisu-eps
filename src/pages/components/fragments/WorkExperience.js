@@ -279,7 +279,7 @@ const WorkExperience = (props) => {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <SelectFragment type='text' name='Government Service' varName='isGovernmentService' value={newData.isGovernmentService} onChange={(e)=>{handleNewDataChange(e)}} options={[
+                                        <SelectFragment disable={props.viewMode} type='text' name='Government Service' varName='isGovernmentService' value={newData.isGovernmentService} onChange={(e)=>{handleNewDataChange(e)}} options={[
                                             {name: 'YES', value: 'YES'},
                                             {name: 'NO', value: 'NO'}
                                         ]}/>
@@ -335,7 +335,7 @@ const WorkExperience = (props) => {
                                 </tr>
                                 <tr>
                                     <td>
-                                    <SelectFragment type='text' name='Government Service' varName='isGovernmentService' value={editData.data.isGovernmentService} onChange={(e)=>{handleEditDataChange(e)}} options={[
+                                    <SelectFragment disable={props.viewMode} type='text' name='Government Service' varName='isGovernmentService' value={editData.data.isGovernmentService} onChange={(e)=>{handleEditDataChange(e)}} options={[
                                             {name: 'YES', value: 'YES'},
                                             {name: 'NO', value: 'NO'}
                                         ]}/>
@@ -403,13 +403,6 @@ const WorkExperience = (props) => {
                         />
                 </div>
                 )}       
-
-
-                 { props.viewMode && (
-
-                <div style={{position: 'fixed', width: '100%', height: '100%'}}>
-                </div>
-                )}   
 
         </Fragment>
      );

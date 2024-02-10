@@ -27,6 +27,10 @@ const GroupedCheckBoxFragment = (props) => {
                 alignItems: 'center',
                 justifyContent: 'flex-start',
             }}>
+
+            {props.disable !== undefined && props.disable === true && 
+              <div style={{position: 'absolute', width: rootDimension.width+'px', height: 'inherit', backgroundColor: 'transparent'}}></div>
+            }
                 <p style={{
                 fontFamily: 'Poppins',
                 fontSize: '15px',

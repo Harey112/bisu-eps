@@ -3,6 +3,7 @@ import Dashboard from "./components/Dashboard";
 import Department from "./components/Department";
 import Employee from "./components/Employee";
 import AddEmployee from "./components/fragments/AddEmployee";
+import ViewDepartment from "./components/fragments/ViewDepartment";
 import Report from "./components/Report";
 
 const HomeHR = ({selected, view}) => {
@@ -15,7 +16,8 @@ const HomeHR = ({selected, view}) => {
       ];
 
     let contents = [
-        {name: "Add Employee", component: AddEmployee, id: "add-employee"}
+        {name: "Add Employee", component: AddEmployee, id: "add-employee"},
+        {name: "View Department", component: ViewDepartment, id: "view-department"}
     ];
 
     let component, title;

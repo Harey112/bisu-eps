@@ -39,6 +39,7 @@ function App() {
                 <Route path="/profile" element={ <Profile/> }/>
                 <Route path="/dashboard" element={<Navigate to="/"/> }/>
                 <Route path="/department" element={ <HomeHR selected="department" view=""/> }/>
+                <Route path="/department/view-department" element={ <HomeHR selected="department" view="view-department"/> }/>
                 <Route path="/employee" element={ <HomeHR selected="employee" view=""/> }/>
                 <Route path="/report" element={ <HomeHR selected="report" view=""/> }/>
                 <Route path="/employee/add-employee" element={ <HomeHR selected="employee" view="add-employee"/> }/>
